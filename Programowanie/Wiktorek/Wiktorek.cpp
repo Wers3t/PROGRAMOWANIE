@@ -155,7 +155,7 @@ Priorytet operatorów:
 
 /*
 Podstawy programowania:
-1. Program obliczajacy srednia arytmetyczna dwoch liczb.
+1. Program obliczajacy srednia arytmetyczna dwoch liczb. 
 2. Program obliczający pole prostokąta.
 3. Program obliczający objętość stożka.
 4. Program obliczający pole koła.
