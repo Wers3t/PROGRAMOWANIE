@@ -3,129 +3,143 @@
 #include <iostream>
 using namespace std;
 
-void firstTask()
+void arithmeticAverage()
 {
-	double a;
-	double b;
-
+	double firstNumber;
+	double secondNumber;
+	double average;
 	cout << "First number" << endl;
-	cin  >> a;
+	cin >> firstNumber;
 	cout << "Second number" << endl;
-	cin >> b;
-	cout <<   "Arithmetic Average of two numbers: " << (a+b)/2 << endl;
-	
+	cin >> secondNumber;
+	average = (firstNumber + secondNumber) / 2;
+	cout << "Arithmetic Average of two numbers: " << average << endl;
 }
 
-void secondTask()
+void squareArea()
 {
-	double a;
-	double b;
-
+	double firstSide;
+	double secondSide;
+	double area;
 	cout << "First side of the square" << endl;
-	cin >> a;
+	cin >> firstSide;
 	cout << "Second side of the square" << endl;
-	cin >> b;
-	cout << "Square area: " << a*b << endl;
-
+	cin >> secondSide;
+	area = firstSide * secondSide;
+	cout << "Square area: " << area << endl;
 }
 
-void thirdTask()
+void coneVolume()
 {
-	double h;
-	double r;
-
+	double height;
+	double radius;
+	double volume;
 	cout << "Height of cone:" << endl;
-	cin >> h;
+	cin >> height;
 	cout << "Radius of cone" << endl;
-	cin >> r;
-	cout << "Cone volume: " << 1.0 / 3 * M_PI * pow(r, 2) * h << endl;
+	cin >> radius;
+	volume = 1.0 / 3 * M_PI * pow(radius, 2) * height;
+	cout << "Cone volume: " << volume << endl;
 }
 
-void fourthTask()
+void circleArea()
 {
-	double r;
+	double radius;
+	double area;
 	cout << "Radius of circle" << endl;
-	cin >> r;
-	cout << "Circle area: " << M_PI * (pow(r, 2)) << endl;
+	cin >> radius;
+	area = M_PI * (pow(radius, 2));
+	cout << "Circle area: " << area << endl;
 }
 
-void fifthTask()
+void powerOfTwoNumbers()
 {
-	double a;
-	double b;
-
+	double firstNumber;
+	double secondNumber;
+	double value;
 	cout << "First Number: " << endl;
-	cin >> a;
+	cin >> firstNumber;
 	cout << "Second Number: " << endl;
-	cin >> b;
-	cout << "Value of a^2 + b^2: " << pow(a, 2) + pow(b, 2) << endl;
+	cin >> secondNumber;
+	value = pow(firstNumber, 2) + pow(secondNumber, 2);
+	cout << "Value of a^2 + b^2: " << value << endl;
 }
 
-void sixthTask()
+void triangleArea()
 {
-	double b;
-	double h;
-
+	double base;
+	double height;
+	double area;
 	cout << "Height of triangle" << endl;
-	cin >> h;
+	cin >> height;
 	cout << "Base of triangle" << endl;
-	cin >> b;
-	cout << "Area of triangle: " << (b*h)/2 << endl;
+	cin >> base;
+	area = (base * height) / 2;
+	cout << "Area of triangle: " << area << endl;
 }
-void seventhTask()
+
+void sphereVolume()
 {
-	double r;
+	double radius;
+	double volume;
 	cout << "Radius of sphere" << endl;
-	cin >> r;
-	cout << "Volume of sphere: " << 4.0 / 3 * M_PI * pow(r, 3) << endl;
+	cin >> radius;
+	volume = 4.0 / 3 * M_PI * pow(radius, 3);
+	cout << "Volume of sphere: " << volume << endl;
 }
-void eightTask()
+
+void trapezoidArea()
 {
-	double a;
-	double b;
-	double h;
+	double firstBase;
+	double secondBase;
+	double height;
+	double area;
 	cout << "First base of trapezoid" << endl;
-	cin >> a;
+	cin >> firstBase;
 	cout << "Second base of trapezoid" << endl;
-	cin >> b;
+	cin >> secondBase;
 	cout << "Height of trapezoid" << endl;
-	cin >> h;
-	cout << "Area of trapezoid: " << 1.0 / 2 * (a + b) * h << endl;
+	cin >> height;
+	area = 1.0 / 2 * (firstBase + secondBase) * height;
+	cout << "Area of trapezoid: " << area << endl;
 }
-void ninthTask()
+
+void weightedAverageOfThreeNumbers()
 {
 	double w1;
 	double w2;
 	double w3;
-	double a;
-	double b;
-	double c;
+	double firstNumber;
+	double secondNumber;
+	double thirdNumber;
+	double average;
 	cout << "First number" << endl;
-	cin >> a;
+	cin >> firstNumber;
 	cout << "First number weight" << endl;
 	cin >> w1;
 	cout << "Second number" << endl;
-	cin >> b;
+	cin >> secondNumber;
 	cout << "Second number weight" << endl;
 	cin >> w2;
 	cout << "Third number" << endl;
-	cin >> c;
+	cin >> thirdNumber;
 	cout << "Third number weight" << endl;
 	cin >> w3;
-	cout << "Weighted average of 3 numbers: " << (a * w1 + b * w2 + c * w3) / (w1 + w2 + w3) << endl;
+	average = (firstNumber * w1 + secondNumber * w2 + thirdNumber * w3) / (w1 + w2 + w3);
+	cout << "Weighted average of 3 numbers: " << average << endl;
 }
 
 int main()
 {
-	//firstTask();
-	//secondTask();
-	//thirdTask();
-	//fourthTask();
-	//fifthTask();
-	//sixthTask();
-	//seventhTask();
-	//eightTask();
-	ninthTask();
+	// ArithmeticAverage();
+	// squareArea();
+	// coneVolume();
+	// circleArea();
+	// powerOfTwoNumbers();
+	// triangleArea();
+	// sphereVolume();
+	//trapezoidArea();
+	//weightedAverageOfThreeNumbers();
 }
 
 /*
