@@ -121,8 +121,8 @@ void task5()
 //6. Program sprawdzający czy podana data jest poprawna(np.sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
 void task6()
 {
-	int month;
 	int day;
+	int month;
 	int year;
 	cout << "Enter the day: " << endl;
 	cin >> day;
@@ -130,7 +130,15 @@ void task6()
 	cin >> month;
 	cout << "Enter the year: " << endl;
 	cin >> year;
-	if (day <= 1 && day >= 31 || month <= 12 && month <= 12)
+	if (month == 1 || month == 3 || month == 5 || month == 7 || month == 9 || month == 11 && day > 0 && day < 32)
+	{
+		cout << "The date is correct." << endl;
+	}
+	else if (month == 4 || month == 6 || month == 8 || month == 10 || month == 12 && day > 0 && day < 31)
+	{
+		cout << "The date is correct." << endl;
+	}
+	else if (month == 2 && day >= 1 && day >= 28)
 	{
 		cout << "The date is correct." << endl;
 	}
@@ -147,11 +155,11 @@ void task7()
 	double temperature;
 	cout << "Enter the temperature: " << endl;
 	cin >> temperature;
-	if (temperature>20)
+	if (temperature > 20)
 	{
 		cout << "It's hot." << endl;
 	}
-	else if(temperature<10)
+	else if (temperature < 10)
 	{
 		cout << "It's cold." << endl;
 	}
@@ -168,7 +176,7 @@ int main()
 	//task3();
 	//task4();
 	//task5();
-	//task6();
+	task6();
 	//task7();
 
 }
