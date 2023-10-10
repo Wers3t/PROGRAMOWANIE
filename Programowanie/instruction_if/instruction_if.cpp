@@ -130,22 +130,18 @@ void task6()
 	cin >> month;
 	cout << "Enter the year: " << endl;
 	cin >> year;
-	if (month == 1 || month == 3 || month == 5 || month == 7 || month == 9 || month == 11 && day > 0 && day < 32)
+	bool  isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+	if	(
+		day < 1 || day >31 || month < 1 || month > 12
+		|| (day == 31 && (month == 4 || month == 6 || month == 9 || month == 11))
+		|| (month ==2 && day >29)
+		||(month ==2 && day ==29 && !isLeapYear)
+		)
 	{
-		cout << "The date is correct." << endl;
-	}
-	else if (month == 4 || month == 6 || month == 8 || month == 10 || month == 12 && day > 0 && day < 31)
-	{
-		cout << "The date is correct." << endl;
-	}
-	else if (month == 2 && day >= 1 && day >= 28)
-	{
-		cout << "The date is correct." << endl;
-	}
-	else
-	{
-		cout << "The date isn't correct." << endl;
-	}
+		cout << "The date isn't correct. " << endl;	
+		return;
+	}	
+	cout << "Date is correct." << endl;
 }
 
 //Program wyświetlający odpowiedni komunikat w zależności od podanej temperatury
@@ -168,6 +164,61 @@ void task7()
 		cout << "It's an average temperature." << endl;
 	}
 }
+//8. Program sprawdzjący czy podana liczba jest z przediału <1;15)
+void task8()
+{
+	double number;
+	cout << "Enter the number: " << endl;
+	cin >> number;
+	if (number >= 1 && number <= 15)
+	{
+		cout << "The number is in the range from 1 to 15." << endl;
+	}
+	else
+	{
+		cout << "The number isn't in the range." << endl;
+	}
+}
+//9. Program sprawdzający czy osoba jest pełnoletnia.
+void task9()
+{
+	int personAge;
+	cout << "Enter the age: " << endl;
+	cin >> personAge;
+	if (personAge >= 18)
+	{
+		cout << "The person is an adult." << endl;
+	}
+	else if (personAge < 18 && personAge>0)
+	{
+		cout << "The person is a minor." << endl;
+	}
+	else
+	{
+		cout << "The age isn't correct. " << endl;
+	}
+}
+//10. Program, który sprawdzi czy z podanych długości boków można zrobić trójkąt.
+void task10()
+{
+	double a;
+	double b;
+	double c;
+	cout << "Enter first side of triangle: " << endl;
+	cin >> a;
+	cout << "Enter second side of triangle: " << endl;
+	cin >> b;
+	cout << "Enter third side of triangle: " << endl;
+	cin >> c;
+	if ((a + b > c) && (b + c > a) && (c + a > b))
+	{
+		cout << "From those sides you can make a triangle." << endl;
+	}
+	else
+	{
+		cout << "You can't do triangle with those sides." << endl;
+	}
+}
 int main()
 {
 	//task();
@@ -176,9 +227,11 @@ int main()
 	//task3();
 	//task4();
 	//task5();
-	task6();
+	//task6();
 	//task7();
-
+	//task8();
+	//task9();
+	//task10();
 }
 
 
