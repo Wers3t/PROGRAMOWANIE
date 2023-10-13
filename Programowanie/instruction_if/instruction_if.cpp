@@ -305,9 +305,7 @@ void task12()
 //  sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
 void task13()
 {
-	double factorA;
-	double factorB;
-	double factorC;
+
 }
 int main()
 {
