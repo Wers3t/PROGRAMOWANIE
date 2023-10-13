@@ -131,16 +131,16 @@ void task6()
 	cout << "Enter the year: " << endl;
 	cin >> year;
 	bool  isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-	if	(
+	if (
 		day < 1 || day >31 || month < 1 || month > 12
 		|| (day == 31 && (month == 4 || month == 6 || month == 9 || month == 11))
-		|| (month ==2 && day >29)
-		||(month ==2 && day ==29 && !isLeapYear)
+		|| (month == 2 && day > 29)
+		|| (month == 2 && day == 29 && !isLeapYear)
 		)
 	{
-		cout << "The date isn't correct. " << endl;	
+		cout << "The date isn't correct. " << endl;
 		return;
-	}	
+	}
 	cout << "Date is correct." << endl;
 }
 
@@ -201,16 +201,16 @@ void task9()
 //10. Program, który sprawdzi czy z podanych długości boków można zrobić trójkąt.
 void task10()
 {
-	double a;
-	double b;
-	double c;
+	double firstSide;
+	double secondSide;
+	double thirdSide;
 	cout << "Enter first side of triangle: " << endl;
-	cin >> a;
+	cin >> firstSide;
 	cout << "Enter second side of triangle: " << endl;
-	cin >> b;
+	cin >> secondSide;
 	cout << "Enter third side of triangle: " << endl;
-	cin >> c;
-	if ((a + b > c) && (b + c > a) && (c + a > b))
+	cin >> thirdSide;
+	if ((firstSide + secondSide > thirdSide) && (secondSide + thirdSide > firstSide) && (thirdSide + firstSide > secondSide))
 	{
 		cout << "From those sides you can make a triangle." << endl;
 	}
@@ -218,6 +218,96 @@ void task10()
 	{
 		cout << "You can't do triangle with those sides." << endl;
 	}
+}
+//11. Napisz program, który będzie działać jako prosty kalkulator matematyczny, umożliwiając użytkownikowi wybór 
+// operacji(dodawanie, odejmowanie, mnożenie, dzielenie) i wprowadzanie liczb do obliczeń.
+void task11()
+{
+	char operation;
+	double firstNumber;
+	double secondNumber;
+
+	cout << "Choose an operation: + (addition), - (subtraction), * (multiplication), / (division)" << endl;
+	cin >> operation;
+	cout << "Enter the first number: " << endl;
+	cin >> firstNumber;
+	cout << "Enter the second number: " << endl;
+	cin >> secondNumber;
+
+	switch (operation)
+	{
+	case '+':
+		cout << "Addition result of those two numbers is: " << firstNumber + secondNumber << endl;
+		break;
+	case '-':
+		cout << "Subtraction result of those two numbers is: " << firstNumber - secondNumber << endl;
+		break;
+	case '*':
+		cout << "Multiplication result of those two numbers is: " << firstNumber * secondNumber << endl;
+		break;
+	case '/':
+		cout << "Subtraction result of those two numbers is: " << firstNumber - secondNumber << endl;
+		break;
+	default:
+		cout << "Invaild operation. Please use '+', '-', '*', or '/'." << endl;
+	}
+}
+//12. Napisz program, który wczyta numer miesiąca i wyświetli jego słowny odpowiednik.
+void task12()
+{
+	int month;
+	cout << "Enter the number of the month: " << endl;
+	cin >> month;
+	
+	switch (month)
+	{
+	case 1:
+		cout << "January" << endl;
+		break;
+	case 2:
+		cout << "February" << endl;
+		break;
+	case 3:
+		cout << "March" << endl;
+		break;
+	case 4:
+		cout << "April" << endl;
+		break;
+	case 5:
+		cout << "May" << endl;
+		break;
+	case 6:
+		cout << "June" << endl;
+		break;
+	case 7:
+		cout << "July" << endl;
+		break;
+	case 8:
+		cout << "August" << endl;
+		break;
+	case 9:
+		cout << "September" << endl;
+		break;
+	case 10:
+		cout << "October" << endl;
+		break;
+	case 11:
+		cout << "November" << endl;
+		break;
+	case 12:
+		cout << "December" << endl;
+		break;
+	default:
+		cout << "There is no such month." << endl;
+	}
+}
+//13. Napisz program, który na podstawie współczynników równania kwadratowego(a, b, c)
+//  sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
+void task13()
+{
+	double factorA;
+	double factorB;
+	double factorC;
 }
 int main()
 {
@@ -232,6 +322,9 @@ int main()
 	//task8();
 	//task9();
 	//task10();
+	//task11();
+	//task12();
+	task13();
 }
 
 
