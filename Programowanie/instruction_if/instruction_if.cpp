@@ -258,7 +258,7 @@ void task12()
 	int month;
 	cout << "Enter the number of the month: " << endl;
 	cin >> month;
-	
+
 	switch (month)
 	{
 	case 1:
@@ -305,7 +305,34 @@ void task12()
 //  sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
 void task13()
 {
-
+	double coefficientA;
+	double coefficientB;
+	double coefficientC;
+	cout << "Enter the first coefficent A: " << endl;
+	cin >> coefficientA;
+	cout << "Enter the second coefficent B: " << endl;
+	cin >> coefficientB;
+	cout << "Enter the third coefficent C: " << endl;
+	cin >> coefficientC;
+	double delta = coefficientB * coefficientB - 4 * coefficientA * coefficientC;
+	if (delta > 0)
+	{
+		double x1 = (-coefficientB + sqrt(delta)) / (2 * coefficientA);
+		double x2 = (-coefficientB - sqrt(delta)) / (2 * coefficientA);
+		cout << "The equation has two real roots." << endl;
+		cout << "x1: " << x1 << endl;
+		cout << "x2: " << x2 << endl;
+	}
+	else if (delta == 0)
+	{
+		double x1 = -coefficientB / (2 * coefficientA);
+		cout << "The equation has only one real root." << endl;
+		cout << "x1: " << x1 << endl;
+	}
+	else
+	{
+		cout << "The equation doesn't have any real roots." << endl;
+	}
 }
 int main()
 {
