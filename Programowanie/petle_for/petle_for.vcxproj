@@ -24,7 +24,7 @@
     <ProjectGuid>{da25fff3-ea06-448b-8e91-499ca6983eca}</ProjectGuid>
     <RootNamespace>petlefor</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>loop_for</ProjectName>
+    <ProjectName>intruction_loop</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
