@@ -63,10 +63,89 @@ void task3()
 		}
 	} while (true);
 }
-//* Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.) dopóki suma tych kwadratów nie przekroczy 1000
+//* Program wyświetlający na ekranie kolejne liczby naturalne od 1 do 10
 void task4()
 {
+	for (int i = 1; i <= 10; i++)
+	{
+		cout << i << endl;
+	}
+}
 
+//* Program obliczający sumę liczb od 1 do 100
+void task5()
+{
+	int sum = 0;
+	for (int i = 1; i <= 100; i++)
+	{
+		sum = sum + i;
+	}
+	cout << sum << endl;
+}
+
+//*Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
+void task6()
+{
+	for (int i = 1; i < 10; i++)
+	{
+		double powerOfNumber = pow(i, 2);
+		cout << powerOfNumber << endl;
+	}
+}
+//	* Program obliczający n!.
+void task7()
+{
+	int numberFromUser;
+	cout << "Enter number: " << endl;
+	cin >> numberFromUser;
+	int sum = 1;
+	for (int i = 1; i <= numberFromUser; i++)
+	{
+		sum = sum * i;
+	}
+	cout << "Factorial equals: " << sum << endl;
+}
+//Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4!itd.)
+void task8()
+{
+	int factorial = 1;
+	for (int i = 1; i <= 10; i++)
+	{
+		factorial = factorial * i;
+		cout << "Factorials 1-10 equals: " << factorial << endl;
+	}
+}
+//* Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1 = 1, 1x2 = 2, 1x3 = 3 itd.).
+void task9()
+{
+
+	for (int i = 1; i <= 9; i++)
+	{
+		for (int j = 1; j <= 9; j++)
+		{
+			cout << i << "*" << j << "=" << i * j << "  ";
+		}
+		cout << endl;
+	}
+}
+//*Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
+void task10()
+{
+	for (int i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0)
+		{
+			cout << i << endl;
+		}
+	}
+}
+//*Program obliczający sumę kwadratów liczb od 1 do 10
+void task11()
+{
+	for (int i = 0; i <=10; i++)
+	{
+
+	}
 }
 /*
 
@@ -80,14 +159,6 @@ WHILE
 * Program sprawdzający czy podana liczba jest liczbą doskonałą(czyli taką, której suma dzielników(z wyłączeniem samej siebie) jest równa danej liczbie, np. 6 jest liczbą doskonałą, ponieważ 1 + 2 + 3 = 6).
 
 FOR
-* Program wyświetlający na ekranie kolejne liczby naturalne od 1 do 10
-* Program obliczający sumę liczb od 1 do 100
-* Program wyświetlający na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
-* Program obliczający n!.
-* Program wyświetlający na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4!itd.)
-* Program wyświetlający na ekranie tabliczkę mnożenia od 1 do 9 (np. 1x1 = 1, 1x2 = 2, 1x3 = 3 itd.).
-* Program wyświetlający na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
-* Program obliczający sumę kwadratów liczb od 1 do 10
 * Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu(ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
 * Program, kóry wyświetli poniższe cztery zwory :
 ****54321        121212        122333
@@ -103,6 +174,13 @@ int main()
 {
 	//task1();
 	//task2();
-	task3();
+	//task3();
+	//task4();
+	//task5();
+	//task6();
+	//task7();
+	//task8();
+	//task9();
+	task10();
 }
 
