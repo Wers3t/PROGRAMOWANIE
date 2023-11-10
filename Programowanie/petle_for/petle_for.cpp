@@ -207,10 +207,41 @@ void task15()
 	cin >> numberFromUser;
 	cout << to_string(numberFromUser).length();
 }
+//* Miasto T.ma obecnie 100 tys.mieszkańców, ale jego populacja rośnie co roku o 3 % rocznie.Miasto B.ma 300 tys.mieszkańców 
+// i ta liczba rośnie w tempie 2 % na rok.Wykonaj symulację prezentującą liczbę mieszkańców w obu miastach i zatrzymującą się, gdy liczba mieszkańców miasta T.przekroczy liczbę z miasta B.
+void task16()
+{
+	int firstCity=100000;
+	int secondCity = 300000;
+	
+	for (int i = 0; firstCity < secondCity; i++)
+	{
+		firstCity = firstCity * 1.03;
+		secondCity = secondCity * 1.02;
+		cout << firstCity << "  " << secondCity << endl;
+	}
+	cout << firstCity << "  " << secondCity << endl;
+}
+
+//Oblicz sumę szeregu 1 / 1 ^ 2 + 1 / 2 ^ 2 + 1 / 3 ^ 2 + ... + 1 / n ^ 2. 
+// Jeżeli się nie pomylisz, to dla odpowiednio dużej wartości n po przemnożeniu jej przez 6 i
+//  spierwiastkowaniu powinieneś otrzymać wartość liczby π(suma szeregu jest równa π2 / 6).Zwróć uwagę, że pierwsza wartość indeksu to 1, a nie 0. Dokładność obliczeń można sprawdzić porównując z wartością odczytaną z własności Math.PI.
+void task17()
+{
+	double sum = 0;
+	double numberFromUser = 0;
+	cout << "Enter number: " << endl;
+	cin >> numberFromUser;
+	for (int i = 1; i < numberFromUser; i++)
+	{
+		sum = sum + (1.0/pow(i, 2));
+	}
+	cout << "Sum: " << sqrt(sum * 6) << endl;
+}
 /*DO - WHILE
 
 WHILE
-* Miasto T.ma obecnie 100 tys.mieszkańców, ale jego populacja rośnie co roku o 3 % rocznie.Miasto B.ma 300 tys.mieszkańców i ta liczba rośnie w tempie 2 % na rok.Wykonaj symulację prezentującą liczbę mieszkańców w obu miastach i zatrzymującą się, gdy liczba mieszkańców miasta T.przekroczy liczbę z miasta B.
+
 
 * Program sprawdzający czy podana liczba jest liczbą doskonałą(czyli taką, której suma dzielników(z wyłączeniem samej siebie) jest równa danej liczbie, np. 6 jest liczbą doskonałą, ponieważ 1 + 2 + 3 = 6).
 
@@ -218,7 +249,6 @@ FOR
 * Program wyświetlający na ekranie ciąg Fibonacciego do 20 elementu(ciąg Fibonacciego to ciąg gdzie każdy element jest sumą dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
 
 
-* Oblicz sumę szeregu 1 / 1 ^ 2 + 1 / 2 ^ 2 + 1 / 3 ^ 2 + ... + 1 / n ^ 2. Jeżeli się nie pomylisz, to dla odpowiednio dużej wartości n po przemnożeniu jej przez 6 i spierwiastkowaniu powinieneś otrzymać wartość liczby π(suma szeregu jest równa π2 / 6).Zwróć uwagę, że pierwsza wartość indeksu to 1, a nie 0. Dokładność obliczeń można sprawdzić porównując z wartością odczytaną z własności Math.PI.
 
 */
 
@@ -240,5 +270,7 @@ int main()
 	//task13();
 	//task14();
 	//task15();
+	//task16();
+	task17();
 }
 
