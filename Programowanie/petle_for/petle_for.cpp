@@ -211,9 +211,9 @@ void task15()
 // i ta liczba rośnie w tempie 2 % na rok.Wykonaj symulację prezentującą liczbę mieszkańców w obu miastach i zatrzymującą się, gdy liczba mieszkańców miasta T.przekroczy liczbę z miasta B.
 void task16()
 {
-	int firstCity=100000;
+	int firstCity = 100000;
 	int secondCity = 300000;
-	
+
 	for (int i = 0; firstCity < secondCity; i++)
 	{
 		firstCity = firstCity * 1.03;
@@ -234,10 +234,32 @@ void task17()
 	cin >> numberFromUser;
 	for (int i = 1; i < numberFromUser; i++)
 	{
-		sum = sum + (1.0/pow(i, 2));
+		sum = sum + (1.0 / pow(i, 2));
 	}
 	cout << "Sum: " << sqrt(sum * 6) << endl;
 }
+
+void task18()
+{
+	int sizeOfPyramid = 0;
+	cout << "Enter number: " << endl;
+	cin >> sizeOfPyramid;
+	for (int row = 0; row < sizeOfPyramid; row++)
+	{
+
+		for (int spaces = 0; spaces < sizeOfPyramid - row - 1; spaces++)
+		{
+			cout << " ";
+
+		}
+		for (int stars = 0; stars <= row * 2; stars++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+
 /*DO - WHILE
 
 WHILE
@@ -271,6 +293,7 @@ int main()
 	//task14();
 	//task15();
 	//task16();
-	task17();
+	//task17();
+	task18();
 }
 
