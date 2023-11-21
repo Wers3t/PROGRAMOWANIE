@@ -19,8 +19,38 @@ void task2()
 	cout << "Hi " << nameFromUser <<"." << endl;
 }
 
+void task3()
+{
+	char signFromUser;
+
+	cout << "Enter sign: " << endl;
+	cin >> signFromUser;
+
+	cout << "You entered sign: " << signFromUser << endl;
+
+	if (signFromUser >= 'a' && signFromUser <= 'z')
+	{
+		cout << "Sign is small letter. " << endl;
+	}
+	else
+	{
+		cout << "Sign is capital letter. " << endl;
+	}
+}
+
+void task4()
+{
+	string userName;
+	cout << "Enter your name: " << endl;
+	cin >> userName;
+
+	cout << "Hi " << userName << "!!" << endl;
+}
+
 int main()
 {
 	//task1();
 	//task2();
+	//task3();
+	task4();
 }
