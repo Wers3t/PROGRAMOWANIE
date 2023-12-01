@@ -1,20 +1,15 @@
 ﻿#include <iostream>
+#include <string>
 using namespace std;
 
 /*
 .
 
-* Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
-* Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+
+
 * Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
 *
 
-* Program wyciągający informacje z numeru PESEL
-* Program implementujący algorytm szyfrowania Cezara (proste szyfrowanie, w którym każdy znak w tekście jest zastępowany innym znakiem, przesuniętym o stałą liczbę pozycji w alfabecie).
-
-
-* Program który na wejściu przyjmie równanie a na wyjściu da równanie w odwrotnej notacji polskiej ONP. Np. na wejściu 2+3*4 na wyjścu da 234*+
-* Program, który na wejściu przyjmie rówanie w ONP a na wyjściu wyświetli wynik rówania.
 */
 //napisz program ktory wczyta znak z klawiatury
 void task1()
@@ -70,14 +65,14 @@ void task5()
 	string textFromUser;
 
 
-	
+
 
 	while (true)
 	{
 		cout << "Enter password: " << endl;
 		cin >> textFromUser;
-		
-		if (textFromUser==password)
+
+		if (textFromUser == password)
 		{
 			break;
 		}
@@ -88,20 +83,20 @@ void task5()
 		}
 	}
 	cout << "Password is correct. " << endl;
-	
-	
+
+
 
 }
 //* Napisz program, który pobiera od użytkownika ciąg znaków i wyświetla liczbę samogłosek i spółgłosek w tym ciągu.
 
 void task6()
 {
-	string vowels ="aeiouyAEIOUY";
+	string vowels = "aeiouyAEIOUY";
 	string textFromUser;
 
 	cout << "Enter text: " << endl;
 	cin >> textFromUser;
-	
+
 	for (int i = 0; i < textFromUser.length(); i++)
 	{
 		for (int j = 0; j < vowels.length(); j++)
@@ -115,14 +110,50 @@ void task6()
 		cout << endl;
 	}
 }
+//Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
+
+void task7()
+{
+	int number;
+	string binaryNumber = "";
+
+	cout << "Enter number: " << endl;
+	cin >> number;
+
+	do
+	{
+		binaryNumber = to_string(number % 2) + binaryNumber;
+	} while (number != 0);
+	cout << binaryNumber << endl;
+}
+
+//* Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
+
+void task8()
+{
+	string textPalindrome = "";
+	string textFromUser;
+
+	cout << "Enter text: " << endl;
+	cin >> textFromUser;
+	for (int i = textFromUser.length() -1; i >= 0; i--)
+	{
+		textPalindrome += textFromUser[i];
+	}
+	if (textFromUser == textPalindrome)
+		std::cout << textFromUser << " that is palindrome.";
+	else
+		std::cout << textFromUser << " that isn't palindrom.";
+}
 
 int main()
 {
-	 
 	//task1();
 	//task2();
 	//task3();
 	//task4();
-	task5();
+	//task5();
 	//task6();
+	//task7();
+	task8();
 }
