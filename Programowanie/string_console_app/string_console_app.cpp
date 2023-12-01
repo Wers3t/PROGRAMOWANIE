@@ -3,7 +3,7 @@ using namespace std;
 
 /*
 .
-* Napisz program, który pobiera od użytkownika ciąg znaków i wyświetla liczbę samogłosek i spółgłosek w tym ciągu.
+
 * Poproś użytkownika o wprowadzenie liczby całkowitej w systemie dziesiętnym. Następnie skonwertuj tę liczbę na system dwójkowy (binarny) i wyświetl wynik.
 * Program sprawdzający czy podany ciąg znaków jest palindromem (czyli takim, który czytany od tyłu jest taki sam, jak czytany od przodu, np. "kajak")
 * Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
@@ -68,25 +68,61 @@ void task5()
 {
 	string password = "abc123";
 	string textFromUser;
-	cout << "Enter password: " << endl;
-	cin >> textFromUser;
 
 
-	if (textFromUser == password)
+	
+
+	while (true)
 	{
-		cout << "Password is correct. " << endl;
+		cout << "Enter password: " << endl;
+		cin >> textFromUser;
+		
+		if (textFromUser==password)
+		{
+			break;
+		}
+		else
+		{
+			cout << "Password isn't correct. " << endl;
+
+		}
 	}
-	else
+	cout << "Password is correct. " << endl;
+	
+	
+
+}
+//* Napisz program, który pobiera od użytkownika ciąg znaków i wyświetla liczbę samogłosek i spółgłosek w tym ciągu.
+
+void task6()
+{
+	string vowels ="aeiouyAEIOUY";
+	string textFromUser;
+
+	cout << "Enter text: " << endl;
+	cin >> textFromUser;
+	
+	for (int i = 0; i < textFromUser.length(); i++)
 	{
-		cout << "Password isn't correct. " << endl;
+		for (int j = 0; j < vowels.length(); j++)
+		{
+			if (textFromUser[i] == vowels[j])
+			{
+				cout << vowels[j] << " to samogloska. ";
+			}
+		}
+
+		cout << endl;
 	}
 }
 
 int main()
 {
+	 
 	//task1();
 	//task2();
 	//task3();
 	//task4();
 	task5();
+	//task6();
 }
