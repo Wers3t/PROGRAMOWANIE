@@ -1,17 +1,9 @@
 ﻿#include <iostream>
 #include <string>
+#include <algorithm>
+
 using namespace std;
 
-/*
-.
-
-
-
-* Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
-*
-
-*/
-//napisz program ktory wczyta znak z klawiatury
 void task1()
 {
 	string characterFromUser;
@@ -146,6 +138,46 @@ void task8()
 		std::cout << textFromUser << " that isn't palindrom.";
 }
 
+// Program sprawdzający czy podane dwa słowa są anagramami (czyli takimi, które zawierają te same litery, ale w innym układzie, np. "klasa" i "salka")
+
+void task9()
+{
+	string firstTextFromUser;
+	string secondTextFromUser;
+	string newText;
+	//int x1, x2;
+	//int temp;
+
+	//temp = x1;
+	//x1 = x2;
+	//x2 = temp;
+
+	cout << "Enter first word: " << endl;
+	cin >> firstTextFromUser;
+	cout << "Enter second word: " << endl;
+	cin >> secondTextFromUser;
+	cout << "Lenght of first text: " << firstTextFromUser.length() << endl;
+	cout << "Lenght of second text: " << secondTextFromUser.length() << endl;
+
+	cout << "----------------" << endl;
+	if (firstTextFromUser.length()!=secondTextFromUser.length())
+	{
+		cout << "That isn't anagram." << endl;
+		return;
+	}
+
+	sort(firstTextFromUser.begin(), firstTextFromUser.end());
+	sort(secondTextFromUser.begin(), secondTextFromUser.end());
+
+	if (firstTextFromUser == secondTextFromUser) {
+		std::cout << "The entered words are anagrams." << std::endl;
+	}
+	else {
+		std::cout << "The entered words are not anagrams." << std::endl;
+	}
+	  
+}
+
 int main()
 {
 	//task1();
@@ -155,5 +187,6 @@ int main()
 	//task5();
 	//task6();
 	//task7();
-	task8();
+	//task8();
+	task9();
 }
