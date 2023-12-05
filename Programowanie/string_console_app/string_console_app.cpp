@@ -170,10 +170,10 @@ void task9()
 	sort(secondTextFromUser.begin(), secondTextFromUser.end());
 
 	if (firstTextFromUser == secondTextFromUser) {
-		std::cout << "The entered words are anagrams." << std::endl;
+		cout << "The entered words are anagrams." << endl;
 	}
 	else {
-		std::cout << "The entered words are not anagrams." << std::endl;
+	cout << "The entered words are not anagrams." << endl;
 	}
 }	
 
