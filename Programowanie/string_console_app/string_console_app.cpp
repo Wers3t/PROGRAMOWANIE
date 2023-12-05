@@ -175,7 +175,7 @@ void task9()
 	else {
 		std::cout << "The entered words are not anagrams." << std::endl;
 	}
-}
+}	
 
 int main()
 {
