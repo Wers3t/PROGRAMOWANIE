@@ -25,7 +25,6 @@ double DistanceFromCenter(point p)
 
 int main()
 {
-    std::cout << "Hello World!\n";
 	point firstPoint;
 	firstPoint.x = 3;
 	firstPoint.y = 5;
