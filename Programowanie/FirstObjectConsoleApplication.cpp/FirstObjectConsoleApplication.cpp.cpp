@@ -70,32 +70,29 @@ public:
 
 class Rectangle
 {
-private:
-	float lenght;
+	float length;
 	float height;
 public:
 	Rectangle(float l = 1, float h = 1)
 	{
-		lenght = l;
+		length = l;
 		height = h;
 	}
 
-
-
-	float getArea() {
-		return lenght * height;
+	float GetArea() {
+		return length * height;
 	}
 
-	float getPerimeter() {
-		return lenght * 2 + height * 2;
+	float GetPerimeter() {
+		return length * 2 + height * 2;
 	}
 
-	void getInfo() {
+	void GetInfo() {
 
-		cout << "Area: " << getArea() << endl;
-		cout << "Perimeter: " << getPerimeter() << endl;
+		cout << "Area: " << GetArea() << endl;
+		cout << "Perimeter: " << GetPerimeter() << endl;
 		cout << "Height: " << height << endl;
-		cout << "Lenght: " << lenght << endl;
+		cout << "Lenght: " << length << endl;
 	}
 };
 
@@ -114,7 +111,6 @@ Napisz program który zaprezentuje możliwości obiektu na podstawie tej klasy.
 
 class BankAccount
 {
-private:
 	string accountNumber;
 	string owner;
 	double balance;
@@ -129,7 +125,15 @@ public:
 	}
 	void Deposit(double sum)
 	{
-		balance += sum;
+
+
+		if (balance < 0)
+		{
+			cout << "You can't deposit sum lesser than 0PLN " << endl;
+		} 
+		else {
+			balance += sum;
+		}
 	}
 
 	void Withdraw(double sum) {
@@ -142,8 +146,7 @@ public:
 		}
 	}
 
-	void
-		Transfer(double sum, string targetAccount)
+	void Transfer(double sum, string targetAccount)
 	{
 		if (balance >= sum)
 		{
@@ -186,9 +189,9 @@ void ShowBankInfo()
 void rectExercises()
 {
 	Rectangle firstRectangle;
-	cout << "Area: " << firstRectangle.getArea() << endl;
-	cout << "Perimeter: " << firstRectangle.getPerimeter() << endl;
-	firstRectangle.getInfo();
+	cout << "Area: " << firstRectangle.GetArea() << endl;
+	cout << "Perimeter: " << firstRectangle.GetPerimeter() << endl;
+	firstRectangle.GetInfo();
 }
 
 
