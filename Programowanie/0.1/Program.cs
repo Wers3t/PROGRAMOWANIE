@@ -91,7 +91,7 @@ foreach(Person p in sortedPeople)
 {
     Console.WriteLine($"Imie: {p.Name} Nazwisko: {p.Surname} Wiek: {p.Age}");
 }
-sortedPeople = people.OrderBy(p => new Random().Next()).ToList();
+sortedPeople = people.OrderBy(p => new Random().Next()).ToList(); 
 
 if (people.All(people => people.Age >= 18))
 {
