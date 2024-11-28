@@ -1,6 +1,8 @@
 ﻿using LinqTasksConsoleApp;
 using System;
 using System.ComponentModel.Design;
+using System.Reflection.Metadata.Ecma335;
+using System.Xml.Linq;
 
 var tasks = new List<TaskItem>
 {
@@ -50,7 +52,7 @@ Console.WriteLine("Zadanie 5");
 
 var tasksName = tasks.Select(t => t.Name).ToList();
 
-foreach ( var task in tasksName)
+foreach (var task in tasksName)
 {
     Console.WriteLine(task);
 }
@@ -79,10 +81,10 @@ foreach (var task in groupByCompleted)
 Console.WriteLine("Zadanie 8");
 
 var shortestNameNotComplited = tasks.Where(t => t.IsCompleted == false).OrderBy(t => t.Name.Length).Select(t => t.Name).First();
-if(shortestNameNotComplited != null)
-    {
-        Console.WriteLine(shortestNameNotComplited);
-    }
+if (shortestNameNotComplited != null)
+{
+    Console.WriteLine(shortestNameNotComplited);
+}
 
 //zadanie 9
 //Zadanie 9: Ilość liter w nazwach wszystkich zakończonych zadań
@@ -91,8 +93,42 @@ Console.WriteLine("Zadanie 9");
 var countedLettersInComplited = tasks.Where(t => t.IsCompleted).Select(t => t.Name.Length);
 foreach (var task in countedLettersInComplited)
 {
-Console.WriteLine(task);
+    Console.WriteLine(task);
 }
 
 //zadanie 10
 //Zadanie 10: Lista zadań z indeksami (zakończone zadania z numeracją)
+Console.WriteLine("Zadanie 10");
+
+int index = 0;
+var intextedCompletedTask = tasks.Where(t => t.IsCompleted).Select(t =>
+{
+    index +=1;
+    return (t.Name, index);
+
+}).ToList();
+
+intextedCompletedTask.ForEach(t => Console.WriteLine(t));
+
+//zadanie 11
+
+//Zadanie 11: Zadania z najdłuższą nazwą w każdej grupie zakończonych i niezakończonych
+
+Console.WriteLine("Zadanie 11");
+
+
+var longestNameInCompletedTask = tasks.GroupBy(t => t.IsCompleted);
+
+foreach (var group in longestNameInCompletedTask)
+{
+    Console.WriteLine($"Zakonczona: {group.Key}");
+    var shortestName = group.OrderBy(t=> t.Name.Length).First().Name;
+    Console.WriteLine($"Najkrotsza nazwa w grupie: {shortestName}");  
+    
+    var longestName= group.OrderByDescending(t=> t.Name.Length).First().Name;
+    Console.WriteLine($"Najdluzsza nazwa w grupie: {longestName}");
+}
+
+//Zadanie 12: Zlicz, ile zadań w każdej grupie zakończonych i niezakończonych zawiera słowo „the” w nazwie
+//zadanie 12
+Console.WriteLine("Zadanie 12");
